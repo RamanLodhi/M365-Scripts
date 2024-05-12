@@ -1,0 +1,1 @@
+The script is to be used with Azure automation account to schedule removal of stale azure ad devices
