@@ -31,16 +31,16 @@ function Compress-Image {
             $image.Save($outputPath, $jpegCodec, $encoderParams)
             $image.Dispose()
 
-            Write-Host "✅ Compressed: $fileName"
+            Write-Host " Compressed: $fileName"
         } else {
             $logEntry = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') - Skipped '$InputPath' (Unsupported format)"
             Add-Content -Path $logFile -Value $logEntry
-            Write-Host "⚠️ Skipped unsupported format: $fileName"
+            Write-Host " Skipped unsupported format: $fileName"
         }
     } catch {
         $logEntry = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') - Failed to compress '$InputPath' - $_"
         Add-Content -Path $logFile -Value $logEntry
-        Write-Host "❌ Failed: $fileName"
+        Write-Host " Failed: $fileName"
     }
 }
 
