@@ -1,4 +1,7 @@
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+
 Add-Type -AssemblyName System.Drawing
+
 
 function Compress-Image {
     param (
